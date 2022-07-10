@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
 
         --black: #000;        
         --black-700: #373737;
+        
+        --white: #fff;
     }
 
     * {
@@ -34,7 +36,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-    background: var(--background);
     -webkit-font-smoothing: antialiased; 
     }
 
