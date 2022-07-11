@@ -4,7 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 280px;
-  margin: 15px;
+  min-width: 280px;
+  max-width: 280px;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
 
   -webkit-box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.47);
   box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.47);
@@ -15,6 +19,7 @@ export const Container = styled.div`
     padding: 8px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     h3 {
       font-weight: 500;

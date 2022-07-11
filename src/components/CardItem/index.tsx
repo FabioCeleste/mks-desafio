@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import { BsFillCartFill } from "react-icons/bs";
 
-interface CardItemProps {
+export interface CardItemProps {
   id: number;
   name: string;
   brand: string;
