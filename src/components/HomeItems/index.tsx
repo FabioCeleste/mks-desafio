@@ -18,7 +18,7 @@ const HomeItems = () => {
   return (
     <Container>
       {products.map((item) => (
-        <CardItem {...item} />
+        <CardItem key={item.id} {...item} />
       ))}
     </Container>
   );

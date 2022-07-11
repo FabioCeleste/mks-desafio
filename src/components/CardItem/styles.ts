@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 280px;
   min-width: 280px;
   max-width: 280px;
+
   justify-content: space-between;
 
   margin-bottom: 15px;
@@ -14,6 +15,10 @@ export const Container = styled.div`
   box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.47);
 
   border-radius: 7px;
+
+  img {
+    max-height: 180px;
+  }
 
   div {
     padding: 8px;

@@ -1,14 +1,18 @@
 import { Container } from "./styles";
 import { BsFillCartFill } from "react-icons/bs";
 
-const Header = () => {
+interface HeaderProps {
+  handleUserClickCart: () => void;
+}
+
+const Header = ({ handleUserClickCart }: HeaderProps) => {
   return (
     <Container>
       <h1>
         MKS <span>Sistemas</span>
       </h1>
 
-      <div>
+      <div onClick={handleUserClickCart}>
         <BsFillCartFill />0
       </div>
     </Container>

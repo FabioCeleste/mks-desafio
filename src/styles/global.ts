@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         --black: #000;        
         --black-700: #373737;
         --black-600: #2C2C2C;
+        --black-200: #BFBFBF;
         
         --white: #fff;
     }
