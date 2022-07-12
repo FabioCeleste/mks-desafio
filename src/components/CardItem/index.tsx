@@ -1,5 +1,6 @@
 import { Container } from "./styles";
 import { BsFillCartFill } from "react-icons/bs";
+import { useCart } from "../../hooks/useCart";
 
 export interface CardItemProps {
   id: number;
@@ -12,7 +13,10 @@ export interface CardItemProps {
   updatedAt: string;
 }
 
-const CardItem = ({ photo, description, name, price }: CardItemProps) => {
+const CardItem = (props: CardItemProps) => {
+  const cart = useCart();
+  const { photo, description, name, price, id } = props;
+
   function formatPrice() {
     const priceArray = price.split(".");
     return priceArray[0];
@@ -35,7 +39,7 @@ const CardItem = ({ photo, description, name, price }: CardItemProps) => {
 
       <p>{formatDescription()}</p>
 
-      <button>
+      <button onClick={() => cart.addNewItemToCart(id, props)}>
         <BsFillCartFill /> COMPRAR
       </button>
     </Container>

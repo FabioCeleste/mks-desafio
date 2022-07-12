@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: var(--white);
-  margin: 2rem;
+  margin: 0 2rem 2rem 2rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
 
@@ -17,7 +17,8 @@ export const Container = styled.div`
     justify-content: space-between;
 
     p {
-      max-width: 7vw;
+      max-width: 4vw;
+      min-width: 4vw;
     }
   }
 `;
@@ -27,27 +28,31 @@ export const Menu = styled.div`
   border-radius: 0.5rem;
 
   cursor: pointer;
-  span {
+  button {
     margin: 0.5rem;
     font-weight: bold;
+    background: none;
+    border: none;
+  }
+  span {
+    padding: 0.5rem;
   }
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-right: 2.7rem;
+  margin-bottom: 1.5rem;
 
-  background: var(--black);
+  height: 1.4rem;
+  width: 1.4rem;
+
+  border-radius: 50%;
   color: var(--white);
+  background: var(--black);
+`;
 
-  margin-right: 1.5vw;
-  margin-bottom: 100px;
-  height: 20px;
-  width: 20px;
-
-  font-size: 1.2rem;
-  border-radius: 100%;
+export const Price = styled.p`
+  font-weight: 800;
 `;

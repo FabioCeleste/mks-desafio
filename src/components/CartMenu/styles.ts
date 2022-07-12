@@ -9,7 +9,7 @@ export const Container = styled.div<CartMenuStyleProps>`
   flex-direction: column;
   justify-content: space-between;
 
-  position: fixed;
+  position: absolute;
   right: 0;
   width: 35vw;
   height: 100vh;
@@ -87,4 +87,9 @@ export const Footer = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
   }
+`;
+
+export const CartContainer = styled.div`
+  overflow-y: scroll;
+  height: 33vw;
 `;
