@@ -39,18 +39,19 @@ export const Menu = styled.div`
   }
 `;
 
-export const CloseButton = styled.button`
-  position: absolute;
-  right: 0;
-  margin-right: 2.7rem;
-  margin-bottom: 1.5rem;
+export const CloseButton = styled.div`
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.4rem;
+    width: 1.4rem;
 
-  height: 1.4rem;
-  width: 1.4rem;
-
-  border-radius: 50%;
-  color: var(--white);
-  background: var(--black);
+    border-radius: 50%;
+    color: var(--white);
+    background: var(--black);
+  }
+  padding-left: 30px;
 `;
 
 export const Price = styled.p`

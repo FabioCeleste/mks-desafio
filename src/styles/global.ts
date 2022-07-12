@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
+        --blue-900: #031130;
         --blue-800: #0F52BA;
+        --blue-600: #0084ff;
 
         --black: #000;        
         --black-700: #373737;
@@ -21,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     body, input, textarea, button {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        overflow-x: hidden;
+        overflow: hidden;
     }
     
     h1, h2, h3, h4, h5, h6, strong {

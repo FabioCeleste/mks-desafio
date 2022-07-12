@@ -19,6 +19,7 @@ export const Container = styled.div<CartMenuStyleProps>`
   animation-direction: alternate;
 
   ${(p) => (p.isCartMenuOpen ? "" : "transform: translate(100%, 0px);")}
+  ${(p) => (p.isCartMenuOpen ? "" : "display: none;")}
 
   @keyframes close {
     0% {
@@ -36,6 +37,13 @@ export const Container = styled.div<CartMenuStyleProps>`
       transform: translate(0px, 0px);
     }
   }
+
+  @media (max-width: 1300px) {
+    width: 55vw;
+  }
+  @media (max-width: 800px) {
+    width: 100vw;
+  }
 `;
 
 export const CartHeader = styled.div`
@@ -43,8 +51,7 @@ export const CartHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  margin: 3rem;
+  margin: 2rem 2rem 0 2rem;
 
   p {
     color: var(--white);
@@ -75,8 +82,8 @@ export const Footer = styled.div`
   font-size: 1.5rem;
   div {
     display: flex;
+    margin: 0 2rem 2rem 2rem;
     justify-content: space-between;
-    margin: 3rem;
   }
 
   button {
@@ -92,4 +99,26 @@ export const Footer = styled.div`
 export const CartContainer = styled.div`
   overflow-y: scroll;
   height: 33vw;
+  margin-top: 2rem;
+  margin-right: 0.3rem;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue-600);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-900);
+  }
 `;

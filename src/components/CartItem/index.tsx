@@ -12,33 +12,29 @@ const CartItem = ({ cardItem, amount }: CartItemProps) => {
   const { name, photo, price } = cardItem;
   const cart = useCart();
   return (
-    <div>
-      <CloseButton onClick={() => cart.deleteItemFromCart(cardItem.id)}>
-        x
-      </CloseButton>
-      <Container>
+    <Container>
+      <div>
         <div>
-          <div>
-            <img src={photo} alt={name} />
+          <img src={photo} alt={name} />
 
-            <p>{name}</p>
-          </div>
-
-          <Menu>
-            <button onClick={() => cart.removeItemFromCart(cardItem.id)}>
-              -
-            </button>
-            | <span>{amount}</span> |
-            <button
-              onClick={() => cart.addNewItemToCart(cardItem.id, cardItem)}
-            >
-              +
-            </button>
-          </Menu>
-          <Price>R${price}</Price>
+          <p>{name}</p>
         </div>
-      </Container>
-    </div>
+
+        <Menu>
+          <button onClick={() => cart.removeItemFromCart(cardItem.id)}>
+            -
+          </button>
+          | <span>{amount}</span> |
+          <button onClick={() => cart.addNewItemToCart(cardItem.id, cardItem)}>
+            +
+          </button>
+        </Menu>
+        <Price>R${price}</Price>
+        <CloseButton onClick={() => cart.deleteItemFromCart(cardItem.id)}>
+          <span>x</span>
+        </CloseButton>
+      </div>
+    </Container>
   );
 };
 
