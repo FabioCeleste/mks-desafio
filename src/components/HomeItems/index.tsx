@@ -1,16 +1,23 @@
+import CardSkeleton from "../../skeletons/CardSkeleton";
+
 import CardItem, { CardItemProps } from "../CardItem";
 import { Container } from "./styles";
 
 interface HomeItemsProps {
   products: CardItemProps[];
+  isLoading: boolean;
 }
 
-const HomeItems = ({ products }: HomeItemsProps) => {
+const HomeItems = ({ products, isLoading }: HomeItemsProps) => {
+  isLoading ? "" : "";
+
+  function renderProducts() {
+    return products.map((item) => <CardItem key={item.id} {...item} />);
+  }
+
   return (
     <Container>
-      {products.map((item) => (
-        <CardItem key={item.id} {...item} />
-      ))}
+      {isLoading ? <CardSkeleton count={8} /> : renderProducts()}
     </Container>
   );
 };
